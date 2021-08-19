@@ -1,0 +1,38 @@
+{
+   "name": "p2p-streaming",
+   "version": "1.0.0",
+   "description": "Live streaming with WebRTC and Node.js. It uses Kademlia DHT to share video chunks among peers.",
+   "main": "host.js",
+   "browserslist": [
+      "last 2 Chrome versions"
+   ],
+   "scripts": {
+      "start": "parcel host.html",
+      "host": "parcel host.html",
+      "viewer": "parcel viewer.html"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "@babel/cli": "^7.13.10",
+      "@babel/core": "^7.13.10",
+      "@babel/preset-env": "^7.13.10",
+      "babel-plugin-syntax-async-functions": "^6.13.0",
+      "babel-plugin-transform-regenerator": "^6.26.0",
+      "babel-polyfill": "^6.26.0",
+      "d": "^1.0.1",
+      "express": "^4.17.1",
+      "libp2p": "^0.30.10",
+      "libp2p-bootstrap": "^0.12.2",
+      "libp2p-kad-dht": "^0.21.0",
+      "libp2p-mplex": "^0.10.2",
+      "libp2p-noise": "^2.0.5",
+      "libp2p-webrtc-star": "^0.21.2",
+      "libp2p-websockets": "^0.14.0",
+      "parcel": "^2.0.0-beta.2"
+   },
+   "devDependencies": {
+      "nodemon": "^2.0.7"
+   }
+}

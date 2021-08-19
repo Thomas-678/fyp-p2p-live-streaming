@@ -1,0 +1,115 @@
+{
+  "name": "libp2p-webrtc-star",
+  "version": "0.21.2",
+  "description": "libp2p WebRTC transport that includes a discovery mechanism provided by the signalling-star",
+  "leadMaintainer": "Vasco Santos <vasco.santos@moxy.studio>",
+  "main": "src/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "bin": {
+    "webrtc-star": "src/sig-server/bin.js",
+    "star-sig": "src/sig-server/bin.js",
+    "star-signal": "src/sig-server/bin.js"
+  },
+  "scripts": {
+    "start": "node src/sig-server/bin.js --port=13579",
+    "star-signal": "node src/sig-server/bin.js",
+    "lint": "aegir lint",
+    "build": "aegir build",
+    "test": "aegir test -t node -t browser",
+    "test:node": "aegir test -t node",
+    "test:browser": "aegir test -t browser",
+    "test:dns": "WEBRTC_STAR_REMOTE_SIGNAL_DNS=1 aegir test -t browser",
+    "test:ip": "WEBRTC_STAR_REMOTE_SIGNAL_IP=1 aegir test -t browser",
+    "release": "aegir release -t node -t browser",
+    "release-minor": "aegir release --type minor -t node -t browser",
+    "release-major": "aegir release --type major -t node -t browser",
+    "coverage": "aegir coverage",
+    "coverage-publish": "aegir coverage --provider coveralls"
+  },
+  "pre-push": [
+    "lint"
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libp2p/js-libp2p-webrtc-star.git"
+  },
+  "keywords": [
+    "IPFS",
+    "libp2p"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/libp2p/js-libp2p-webrtc-star/issues"
+  },
+  "homepage": "https://github.com/libp2p/js-libp2p-webrtc-star#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "@hapi/hapi": "^20.0.0",
+    "@hapi/inert": "^6.0.3",
+    "node-pre-gyp": "^0.17.0",
+    "abortable-iterator": "^3.0.0",
+    "class-is": "^1.1.0",
+    "debug": "^4.2.0",
+    "err-code": "^3.0.1",
+    "ipfs-utils": "^6.0.0",
+    "it-pipe": "^1.1.0",
+    "libp2p-utils": "^0.2.1",
+    "libp2p-webrtc-peer": "^10.0.1",
+    "mafmt": "^8.0.0",
+    "menoetius": "0.0.2",
+    "minimist": "^1.2.5",
+    "multiaddr": "^8.0.0",
+    "p-defer": "^3.0.0",
+    "peer-id": "^0.14.2",
+    "prom-client": "^13.0.0",
+    "socket.io": "^2.3.0",
+    "socket.io-next": "npm:socket.io@^3.0.4",
+    "socket.io-client-next": "npm:socket.io-client@^3.0.4",
+    "stream-to-it": "^0.2.2",
+    "streaming-iterables": "^5.0.3",
+    "aegir": "^30.2.0",
+    "chai": "^4.2.0",
+    "dirty-chai": "^2.0.1",
+    "electron-webrtc": "~0.3.0",
+    "libp2p-interfaces": "^0.8.1",
+    "p-wait-for": "^3.1.0",
+    "sinon": "^9.2.0",
+    "socket.io-client": "^2.3.0",
+    "uint8arrays": "^2.0.5",
+    "wrtc": "^0.4.6"
+  },
+  "contributors": [
+    "David Dias <daviddias.p@gmail.com>",
+    "Vasco Santos <vasco.santos@moxy.studio>",
+    "Jacob Heun <jacobheun@gmail.com>",
+    "Friedel Ziegelmayer <dignifiedquire@gmail.com>",
+    "Yahya <ya7yaz@gmail.com>",
+    "Pedro Teixeira <i@pgte.me>",
+    "Alex Potsides <alex@achingbrain.net>",
+    "Maciej Krüger <mkg20001@gmail.com>",
+    "Dmitriy Ryajov <dryajov@gmail.com>",
+    "ᴠɪᴄᴛᴏʀ ʙᴊᴇʟᴋʜᴏʟᴍ <victorbjelkholm@gmail.com>",
+    "Alan Shaw <alan.shaw@protocol.ai>",
+    "Smite Chow <xiaopengyou2no1@gmail.com>",
+    "Hugo Dias <mail@hugodias.me>",
+    "michaelfakhri <fakhrimichael@live.com>",
+    "Juan Benet <juan@benet.ai>",
+    "Jacob Friedman <friedjacob@gmail.com>",
+    "Richard Littauer <richard.littauer@gmail.com>",
+    "SeungWon <ksw3894@gmail.com>",
+    "Flarp <flurpdadurp@gmail.com>",
+    "anders <andersb@tuta.io>",
+    "Diogo Silva <fsdiogo@gmail.com>",
+    "dmitriy ryajov <dryajov@dmitriys-MBP.HomeNET>",
+    "Andrey Petrov <shazow@gmail.com>",
+    "Baris Gumustas <barisgumustas@gmail.com>",
+    "interfect <interfect@gmail.com>"
+  ]
+}
